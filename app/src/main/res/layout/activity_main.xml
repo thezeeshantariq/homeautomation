@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <!-- Image View -->
+    <FrameLayout
+        android:id="@+id/frameLayoutImageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_house"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/house" />
+
+    </FrameLayout>
+    <!-- Image View -->
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/button2DView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_gradient_purple"
+            android:padding="8dp"
+            android:text="2D"
+            android:drawableLeft="@drawable/ic_2d"
+            android:drawableTint="@color/colorWhite"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/button3DView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_gradient_purple"
+            android:padding="8dp"
+            android:text="3D"
+            android:drawableLeft="@drawable/ic_3d"
+            android:drawableTint="@color/colorWhite"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/buttonListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_gradient_purple"
+            android:padding="8dp"
+            android:text="List"
+            android:drawableLeft="@drawable/ic_list"
+            android:drawableTint="@color/colorWhite"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/buttonGridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_gradient_purple"
+            android:padding="8dp"
+            android:text="Grid"
+            android:drawableLeft="@drawable/ic_grid"
+            android:drawableTint="@color/colorWhite"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+    <!-- ./Buttons -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
